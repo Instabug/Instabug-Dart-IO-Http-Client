@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:instabug_dart_io_http_client/http_client_logger.dart';
+import 'package:instabug_dart_io_http_client/src/http_client_logger.dart';
 
 class InstabugCustomHttpClientRequest implements HttpClientRequest {
   InstabugCustomHttpClientRequest(this._originalClientRequest, this.logger) {

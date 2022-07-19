@@ -5,9 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:instabug_flutter/NetworkLogger.dart';
 import 'package:instabug_flutter/models/network_data.dart';
-import 'package:instabug_dart_io_http_client/instabug_custom_http_client.dart';
-import 'package:instabug_dart_io_http_client/instabug_custom_http_client_request.dart';
-import 'package:instabug_dart_io_http_client/http_client_logger.dart';
+import 'package:instabug_dart_io_http_client/src/instabug_custom_http_client.dart';
+import 'package:instabug_dart_io_http_client/src/instabug_custom_http_client_request.dart';
+import 'package:instabug_dart_io_http_client/src/http_client_logger.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 

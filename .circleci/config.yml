@@ -10,6 +10,13 @@ jobs:
       - run: flutter pub run build_runner build --delete-conflicting-outputs
       - run: flutter test
       - run: dartanalyzer --options analysis_options.yaml --fatal-warnings lib
+   release:
+    docker:
+      - image: cirrusci/flutter
+    steps:
+      - checkout
+      - run: chmod +x release.sh
+      - run: ./release.sh     
 
 workflows:
   version: 2
@@ -22,4 +29,10 @@ workflows:
             - test
           filters:
             branches:
-              only: master     
+              only: master  
+      - release:
+          requires:
+            - hold
+          filters:
+            branches:
+              only: master           

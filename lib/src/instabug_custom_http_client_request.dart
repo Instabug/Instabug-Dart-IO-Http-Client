@@ -13,9 +13,9 @@ class InstabugCustomHttpClientRequest implements HttpClientRequest {
     persistentConnection = _originalClientRequest.persistentConnection;
   }
 
-  HttpClientRequest _originalClientRequest;
+  final HttpClientRequest _originalClientRequest;
 
-  StringBuffer _requestBody = StringBuffer();
+  final StringBuffer _requestBody = StringBuffer();
 
   late HttpClientLogger logger;
 

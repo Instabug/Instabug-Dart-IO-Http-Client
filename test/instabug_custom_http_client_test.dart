@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:instabug_flutter/instabug_flutter.dart';
+import 'package:instabug_dart_io_http_client/src/http_client_logger.dart';
 import 'package:instabug_dart_io_http_client/src/instabug_custom_http_client.dart';
 import 'package:instabug_dart_io_http_client/src/instabug_custom_http_client_request.dart';
-import 'package:instabug_dart_io_http_client/src/http_client_logger.dart';
+import 'package:instabug_flutter/instabug_flutter.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
@@ -219,7 +219,7 @@ void main() {
     await instabugCustomHttpClientRequest.close();
 
     verify(instabugCustomHttpClient.logger
-        .onRequestUpdate(mockRequest, requestBody: body.toString() + '\n'));
+        .onRequestUpdate(mockRequest, requestBody: '$body\n'));
   });
 
   test(
